@@ -85,7 +85,7 @@ class SeguroHogar: Seguro {
     }
 
     override fun tipoSeguro(): String {
-        TODO("Not yet implemented")
+        return this::class.simpleName ?: "Desconocido"
     }
 
     override fun serializar(separador: String): String {
@@ -93,6 +93,6 @@ class SeguroHogar: Seguro {
     }
 
     override fun toString(): String {
-        return "Seguro Hogar(" + "numPoliza=${super.numPoliza}, " + "dniTitular=${super.serializar(";").split(";")[1]}, " + "importe=%.2f, ".format(super.importe) + "metrosCuadrados=$metrosCuadrados, " + "valorContenido=%.2f, ".format(valorContenido) + "direccion='$direccion', " + "anioConstruccion=$anioConstruccion)"
+        return "Seguro Hogar(numPoliza=${super.numPoliza}, dniTitular=${super.serializar(";").split(";")[1]}, importe=%.2f, ".format(super.importe) + "metrosCuadrados=$metrosCuadrados, valorContenido=%.2f, ".format(valorContenido) + "direccion='$direccion', anioConstruccion=$anioConstruccion)"
     }
 }

@@ -8,11 +8,11 @@ enum class Riesgo(interesAplicado: Double) {
 
     companion object{
         fun getRiesgo(valor: String) : Riesgo{
-            if (valor.uppercase() == Riesgo.BAJO.toString()){
+            if (valor.uppercase().trim() == Riesgo.BAJO.toString()){
                 return Riesgo.BAJO
-            } else if (valor.uppercase() == Riesgo.MEDIO.toString()){
+            } else if (valor.uppercase().trim() == Riesgo.MEDIO.toString()){
                 return Riesgo.MEDIO
-            } else if (valor.uppercase() == Riesgo.ALTO.toString()){
+            } else if (valor.uppercase().trim() == Riesgo.ALTO.toString()){
                 return Riesgo.ALTO
             } else {
                 return Riesgo.MEDIO

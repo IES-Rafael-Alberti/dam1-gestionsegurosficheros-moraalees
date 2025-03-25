@@ -7,11 +7,11 @@ enum class Perfil {
 
     companion object{
         fun getPerfil(valor: String): Perfil {
-            return if (valor.uppercase() == Perfil.CONSULTA.toString()){
+            return if (valor.uppercase().trim() == Perfil.CONSULTA.toString()){
                 Perfil.CONSULTA
-            } else if (valor.uppercase() == Perfil.GESTION.toString()){
+            } else if (valor.uppercase().trim() == Perfil.GESTION.toString()){
                 Perfil.GESTION
-            } else if (valor.uppercase() == Perfil.ADMIN.toString()) {
+            } else if (valor.uppercase().trim() == Perfil.ADMIN.toString()) {
                 Perfil.ADMIN
             } else {
                 Perfil.CONSULTA

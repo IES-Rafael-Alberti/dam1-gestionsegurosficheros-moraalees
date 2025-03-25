@@ -7,11 +7,11 @@ enum class Auto {
 
     companion object{
         fun getAuto(valor: String): Auto{
-            if (valor.uppercase() == Auto.COCHE.toString()){
+            if (valor.uppercase().trim() == Auto.COCHE.toString()){
                 return Auto.COCHE
-            } else if (valor.uppercase() == Auto.MOTO.toString()){
+            } else if (valor.uppercase().trim() == Auto.MOTO.toString()){
                 return Auto.MOTO
-            } else if (valor.uppercase() == Auto.CAMION.toString()){
+            } else if (valor.uppercase().trim() == Auto.CAMION.toString()){
                 return Auto.CAMION
             } else {
                 return Auto.COCHE
