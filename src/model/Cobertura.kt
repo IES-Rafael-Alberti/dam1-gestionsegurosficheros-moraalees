@@ -1,6 +1,6 @@
 package src.model
 
-enum class Cobertura(desc: String) {
+enum class Cobertura(val desc: String) {
 
     TERCEROS("Terceros"),
     TERCEROS_AMPLIADO("Terceros +"),

@@ -8,7 +8,9 @@ abstract class Seguro(
 
     abstract fun calcularImporteAnioSiguiente(interes: Double): Double
 
-    abstract fun tipoSeguro(): String
+    fun tipoSeguro(): String{
+        return this::class.simpleName ?: "Desconocido"
+    }
 
     override fun serializar(separador: String): String {
         return numPoliza.toString() + separador + dniTitular + separador + importe + separador

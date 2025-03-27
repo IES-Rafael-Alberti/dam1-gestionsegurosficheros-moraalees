@@ -1,6 +1,6 @@
 package src.model
 
-enum class Riesgo(interesAplicado: Double) {
+enum class Riesgo(val interesAplicado: Double) {
 
     BAJO(2.0),
     MEDIO(5.0),
