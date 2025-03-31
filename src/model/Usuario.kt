@@ -30,8 +30,13 @@ class Usuario(
         }
     }
 
-    fun cambiarClave(nuevaClaveEncriptada: String){
-        clave = nuevaClaveEncriptada
+    fun cambiarClave(nuevaClave: String): Boolean {
+        return if (nuevaClave != clave) {
+            this.clave = nuevaClave
+            true
+        } else {
+            false
+        }
     }
 
     override fun serializar(separador: String): String {

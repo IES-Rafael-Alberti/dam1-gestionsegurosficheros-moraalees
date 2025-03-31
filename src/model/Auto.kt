@@ -7,14 +7,14 @@ enum class Auto {
 
     companion object{
         fun getAuto(valor: String): Auto{
-            if (valor.uppercase().trim() == Auto.COCHE.toString()){
-                return Auto.COCHE
+            return if (valor.uppercase().trim() == Auto.COCHE.toString()){
+                Auto.COCHE
             } else if (valor.uppercase().trim() == Auto.MOTO.toString()){
-                return Auto.MOTO
+                Auto.MOTO
             } else if (valor.uppercase().trim() == Auto.CAMION.toString()){
-                return Auto.CAMION
+                Auto.CAMION
             } else {
-                return Auto.COCHE
+                Auto.COCHE
             }
         }
     }
