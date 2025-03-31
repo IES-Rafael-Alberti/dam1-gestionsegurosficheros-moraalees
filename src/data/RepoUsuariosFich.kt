@@ -1,4 +1,12 @@
 package src.data
 
-class RepoUsuariosFich {
+import src.utils.IUtilFicheros
+
+class RepoUsuariosFich(
+    val rutaArchivo: String,
+    val fichero: IUtilFicheros
+){
+
+
+
 }
